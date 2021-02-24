@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Students</h1>
+
+<table class="table table-striped table-bordered table-hover">
+   <thead class="table-dark">
+    <tr>
+      <th>Firts name</th>
+      <th>Last name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Facebook</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @studentifs.each do |studentif| %>
+      <tr>
+        <td><%= studentif.firts_name %></td>
+        <td><%= studentif.last_name %></td>
+        <td><%= studentif.email %></td>
+        <td><%= studentif.phone %></td>
+        <td><%= studentif.facebook %></td>
+        <td><%= link_to 'Show', studentif %></td>
+        <td><%= link_to 'Edit', edit_studentif_path(studentif) %></td>
+        <td><%= link_to 'Destroy', studentif, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Student', new_studentif_path, class: "btn btn-dark" %>

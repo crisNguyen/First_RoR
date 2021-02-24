@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Firts name:</strong>
+  <%= @studentif.firts_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @studentif.last_name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @studentif.email %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @studentif.phone %>
+</p>
+
+<p>
+  <strong>Facebook:</strong>
+  <%= @studentif.facebook %>
+</p>
+
+<%= link_to 'Edit', edit_studentif_path(@studentif),class: "btn btn-secondary" %> |
+<%= link_to 'Back', studentifs_path,class: "btn btn-dark" %>
